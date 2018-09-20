@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trip mileage calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #date {
+            width: 284px;
+            height: 25px;
+            background: #ccc;
+        }
+    </style>
+    </head>
+  <body>
+
+<nav class="navbar navbar-default navbar-inverse" style="margin-bottom:0;border-radius:0;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>    
+      <a class="navbar-brand" href="calculator.html">
+        <img class="logo" src="css/projlogo.png"/>
+        <span>Road Trippin' Calculator</span>
+        </a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="news.html">Newsletter</a></li>
+        <li><a href="listemployees.php">Employees</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="admin.php">Admin</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<body>
+
+
+    <main>
+        
+        <div id="date"></div>
+        
+        <!-- give current date and time -->
+        <h1 style = "color: orangered">Calculate how much your travel will cost.</h1>
+        <!-- form to receive and store user entry -->
+        <div>
+            <label for="miles">Miles Driven:</label>
+            <input type="text" id="miles">
+        </div>
+        
+        <div>
+            <label for="gallons">Gallons of Gas Used:</label>
+            <input type="text" id="gallons">
+        </div>
+
+        <div>
+            <label for="price">Enter price of fuel:</label>
+            <input type="text" id="price">
+        </div>
+
+        <label>&nbsp;</label>
+        <input type="button" id="calculate" value="Calculate Cost"><br>
+        <div>
+            <h3 id="cost"></h3>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- call calculateCost -->
+    <script src="calculateCost.js"></script>
+    <!-- call processEntries -->
+    <script src="processEntries.js"></script>
+
+
+    <script>    
+    // calculate
+    window.onload = function(){
+        $("calculate").onclick = processEntries;
+        $("miles").focus();
+    };
+
+    // date explodes when clicked
+    document.getElementById("date").innerHTML = Date();
+        jQuery("#date").click(function(){
+            jQuery("#date").toggle("explode");
+        });
+        jQuery('.logo').click(function() {
+            jQuery("#date").toggle("explode");
+    });//end explode
+    </script>
+
+    </body>
+    </html>

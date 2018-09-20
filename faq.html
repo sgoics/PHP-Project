@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Road Trippin' Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="faq.js"></script>
+    <!-- <script>
+  $(document).ready(function() {
+    $('.answer').hide();
+    $('.main h3').click(function(){
+      var $answer = $(this).next('.answer');
+      if($answer.is(':hidden')){
+        $answer.slideDown();
+        $(this).addClass('close')
+      }else{
+        $answer.fadeOut();
+        $(this).removeClass('close');
+      }
+    })//end click
+  }); // end ready -->
+  </script>
+  <script>
+  $( function(){
+    $( "#accordion" ).accordion();
+});//end accordion
+  </script>
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-inverse" style="margin-bottom:0;border-radius:0;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>    
+      <a class="navbar-brand" href="calculator.html">
+          <img class="logo" src="css/projlogo.png"/>
+          <span>Road Trippin' Calculator</span>
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="news.html">Newsletter</a></li>
+        <li><a href="listemployees.php">Employees</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="main">    
+<h2 style = "color: orangered">Below are some frequently asked questions.</h2>
+<div id="accordion">
+<h3 style="background: #000">How can I find out future fuel costs?</h3>
+<!-- <div class="answer"> -->
+<div>
+    <p>Fuel costs can typically be looked up using googlemaps or mapquest.</p>
+</div>
+<!-- <div class="faq"> -->
+    <h3 style="background: #000">How much does this service cost?</h3>
+<!-- <div class="answer"> -->
+  <div>
+  <p>The service is completely free!</p>
+</div>
+<!-- <div class="faq"> -->
+  <h3 style="background: #000">How is it that you guys are so awesome?</h3>
+<!-- <div class="answer"> -->
+  <div>
+  <p>Good question, we're still trying to figure that one out!</p>
+</div>  
+</div>
+</div>
+<!-- <style>
+  #resizable{ width: 150px; height: 150px; padding: 0.5em;}
+  #resizable resizable { text-align: center; margin: 0; }
+</style> -->
+<script>
+  $( function(){
+    $( "#imgSwap" ).resizable();
+  });//end resizable
+</script>
+
+<a href="#" onmouseover="imgSwap('imgSwap','images/save_money_gas.jpg');" onmouseout=
+"imgSwap('imgSwap', 'images/gasMoney.jpg');">
+  <img src='images/gasMoney.jpg' width='250' height='200' id="imgSwap"/>
+</a>
+<!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Road Trippin' Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<script src="email_list.js"></script>-->
+  </head>
+  <body>
+<!--<form action="news_thanks.php" method="get">-->
+<nav class="navbar navbar-default navbar-inverse" style="margin-bottom:0;border-radius:0;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>    
+      <a class="navbar-brand" href="calculator.html">
+          <img class="logo" src="css/projlogo.png"/>
+          <span>Road Trippin' Calculator</span>
+        </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="news.html">Newsletter</a></li>
+          <li><a href="listemployees.php">Employees</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="admin.php">Admin</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <main>
+    <h1 style = "color: orangered">Please fill out the form below<br>to register for our newsletter.</h1>
+    <form action="news_thanks.php" method="post"
+          name="email_form" id="email_form">
+    <!--<form id="email_form" name="email_form" action="news_thanks.php" method="get">-->
+        <label for="email">Email Address:</label>
+        <input type="text"  id="email" pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" name="email" required><br>
+
+        <label for="email_address2">Re-enter Email Address:</label>
+        <input type="text"  id="email2" pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" name="email2" required><br>
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label>&nbsp;</label>
+        <input type="submit" id="join_list" value="Join our List">
+    </form>
+</main>
+<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
